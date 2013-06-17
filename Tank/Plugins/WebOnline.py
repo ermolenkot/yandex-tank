@@ -196,7 +196,7 @@ class WebOnlineHandler(BaseHTTPRequestHandler):
                 if self.path == '/Avg.json':
                     self.wfile.write(json.dumps(self.server.owner.avg_data))
                 elif self.path == '/redirect.json':
-                    self.wfile.write('["' + self.server.owner.redirect + '"]')
+                    self.wfile.write('["' + str(self.server.owner.redirect) + '"]')
                 elif self.path == '/numbers.json':
                     sec = self.server.owner.last_sec
                     net = 0
